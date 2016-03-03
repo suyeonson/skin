@@ -4,3 +4,49 @@ $accent-lighter-color: #dbb9b9;
 $primary-color: #aaaaaa;
 $primary-lighter-color: #d4d0d4;
 $light-gray-color: #f9f9f9;
+
+#slider {
+	position: relative;
+	padding: 0;
+	margin: 50px; 
+	width: 20%; 
+	height: 80vh; 
+	background-color: pink;
+
+	#slider-bar, #slider-pct, #slider-answer-bar, #slider-answer-pct {
+		position: absolute;
+	}
+	#slider-bar {
+		margin: 0;
+		cursor: pointer;
+		border-top: 5px solid black;
+		margin-left: -15px;
+    	padding-right: 30px;
+		top: 50%;
+		left: 0 !important;
+		width: 100%;
+	}
+	#slider-pct {
+		top: 49%;
+    	width: 100%;
+    	left: 100%;
+    	margin-left: 30px;
+	}
+	#slider-answer {
+		display: none;
+
+		#slider-answer-bar {
+			border-top: 5px solid yellow;
+			margin-left: -15px;
+    		padding-right: 30px;
+			top: 78%;
+			width: 100%;
+		}
+		#slider-answer-pct {
+			top: 80%;
+    		width: 100%;
+    		left: 100%;
+    		margin-left: 30px;
+		}
+	}
+}
