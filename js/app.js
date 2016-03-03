@@ -28,7 +28,7 @@ angular.module("skin", [
 			$("#slider-answer").fadeIn();
 
 			var sliderPct = Math.round((sliderHeight-ui.position.top)/sliderHeight * 100);
-			$scope.responses.$add(sliderPct);
+			$scope.responses.$add({q1:sliderPct});
 		}
 	});
 

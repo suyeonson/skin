@@ -69,4 +69,8 @@ $light-gray-color: #f9f9f9;
     left: 0;
     width: 100%;
     z-index: 1;
+
+    ul>li>a.active {
+    	color: blue;
+    }
 }
