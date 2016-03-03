@@ -1,9 +1,12 @@
 .deck {
   width: 100vw;
-  height: 100vh; }
+  height: 100vh;
+  padding: 50px; }
 
 #intro {
-  background-color: gray; }
+  background-color: gray;
+  position: relative;
+  z-index: 2; }
 
 #slider {
   position: relative;
@@ -41,5 +44,12 @@
       width: 100%;
       left: 100%;
       margin-left: 30px; }
+
+.navbar.navbar-default {
+  margin-bottom: 0;
+  position: fixed;
+  left: 0;
+  width: 100%;
+  z-index: 1; }
 
 /*# sourceMappingURL=style.css.map */

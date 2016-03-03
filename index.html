@@ -10,13 +10,36 @@
     </head>
     <body>
     	<div class="container-fluid" ng-controller="SliderCtrl">
+            <nav class="navbar navbar-default">
+                <ul class="nav navbar-nav">
+                    <li><a href="#intro" du-smooth-scroll du-scrollspy>Home</a></li>
+                    <li><a href="#section-1" du-smooth-scroll du-scrollspy>Section 1</a></li>
+                    <li><a href="#section-2" du-smooth-scroll du-scrollspy>Section 2</a></li>
+                </ul>
+            </nav>
             <div class="row deck" id="intro">
                 <div class="col-xs-12">
                 SKIN.
                 {{responses.length}} people have taken this.
                 </div>
             </div>
-            <div class="row deck">
+            <div class="row deck" id="section-1">
+                <div class="col-xs-12">
+                    <div class="row">
+                        <div class="col-xs-4">
+                            <div id="slider">
+                                <hr id="slider-bar">
+                                <span id="slider-pct">50%</span>
+                                <div id="slider-answer">
+                                    <hr id="slider-answer-bar">
+                                    <span id="slider-answer-pct">The answer is 22%.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row deck" id="section-2">
                 <div class="col-xs-12">
                     <div class="row">
                         <div class="col-xs-4">
@@ -38,6 +61,7 @@
         <script src="lib/jquery-ui.min.js"></script>
         <script src="node_modules/angular/angular.js"></script>
         <script src="node_modules/angular-route/angular-route.min.js"></script>
+        <script src="bower_components/angular-scroll/angular-scroll.min.js"></script>
         <script src="lib/firebase.js"></script>
 		<script src="lib/angularfire.min.js"></script>
         <script src="lib/tabletop.js"></script>

@@ -2,9 +2,10 @@
 
 angular.module("skin", [
 	"ngRoute",
-	"firebase"
+	"firebase",
+	"duScroll"
 ])
-.controller('SliderCtrl', ["$scope", "$firebaseArray", function($scope, $firebaseArray) {
+.controller('SliderCtrl', ["$scope", "$firebaseArray", function($scope, $firebaseArray, $document) {
 	var fireObj = new Firebase("https://skin-editorslab.firebaseio.com");
 
 	var sliderBarHeight = 5;
@@ -30,4 +31,15 @@ angular.module("skin", [
 			$scope.responses.$add(sliderPct);
 		}
 	});
+
+	// scroll spy / nav tracking
+    $scope.toTheTop = function() {
+    	$document.scrollTopAnimated(0, 5000).then(function() {
+        	console && console.log('You just scrolled to the top!');
+    	});
+    };
+    var section3 = angular.element(document.getElementById('section-3'));
+    $scope.toSection3 = function() {
+    	$document.scrollToElementAnimated(section3);
+    };
 }]);
