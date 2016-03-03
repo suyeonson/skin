@@ -10,22 +10,24 @@
     </head>
     <body>
     	<div class="container-fluid" ng-controller="SliderCtrl">
-            <div class="row">
+            <div class="row deck" id="intro">
                 <div class="col-xs-12">
                 SKIN.
                 {{responses.length}} people have taken this.
                 </div>
             </div>
-            <div class="row">
+            <div class="row deck">
                 <div class="col-xs-12">
                     <div class="row">
-                        <div class="col-xs-4" id="slider">
+                        <div class="col-xs-4">
+                            <div id="slider">
                                 <hr id="slider-bar">
                                 <span id="slider-pct">50%</span>
                                 <div id="slider-answer">
                                     <hr id="slider-answer-bar">
                                     <span id="slider-answer-pct">The answer is 22%.</span>
                                 </div>
+                            </div>
                         </div>
                     </div>
                 </div>
