@@ -30,7 +30,9 @@ body {
       bottom: 30px; }
       #intro #intro-top #teaser #cumulative-score {
         color: #fffbe1;
-        font-size: 7em; }
+        font-size: 270px;
+        line-height: 270px;
+        margin-bottom: 30px; }
   #intro #intro-bottom {
     height: 30vh;
     background-color: #fffbe1;
@@ -109,6 +111,18 @@ body {
     border-width: 20px 0 20px 45px;
     border-color: transparent transparent transparent #fffbe1;
     margin-top: 30px; }
+
+#section-2 svg {
+  margin-left: 50px;
+  width: 80%; }
+  #section-2 svg path {
+    fill: #fffbe1; }
+#section-2 #check-answer {
+  background-color: #30140d;
+  color: #fffbe1;
+  border: none; }
+#section-2 #q2-answer {
+  display: none; }
 
 .navbar.navbar-default {
   margin-bottom: 0;

@@ -74,7 +74,7 @@ angular.module("skin", [
     };
 
     // d3 australia
-	var width = 500,
+	var width = 600,
           height = 300;
     
 	var projection = d3.geo.conicConformal()
@@ -108,5 +108,28 @@ angular.module("skin", [
 
 	d3.select(self.frameElement).style("height", height + "px");
 
-	
+	// peeps
+	$scope.q2 = [];
+
+	var answerClicked = false;
+
+	$("#people path").mouseover(function() {
+		if (!answerClicked) {
+			if (!$(this).hasClass("selected-ppl")) {
+				$scope.q2.push($("#people path.selected-ppl"));
+				$scope.$evalAsync();
+			}
+
+			$(this).css("fill", "#30140d");
+			$(this).addClass("selected-ppl");
+		}
+	});
+
+	$("#check-answer").on("click", function() {
+		answerClicked = true;
+
+		$("#q2-answer").fadeIn(3000);
+		$("#people path").css("fill", "#fffbe1");
+		$("#people path").slice(0,30).css("fill", "#30140d");
+	});
 }]);

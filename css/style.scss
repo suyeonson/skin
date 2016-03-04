@@ -50,7 +50,9 @@ body {
 
 			#cumulative-score {
 				color: $creme;
-				font-size: 7em;
+				font-size: 270px;
+				line-height: 270px;
+   				margin-bottom: 30px;
 			}
 		}
 	}
@@ -144,7 +146,7 @@ body {
 	display: none;
 
 	svg {
-		margin-left: -150px;		
+		margin-left: -150px;
 	}
 
 	#arrow-right {
@@ -155,6 +157,26 @@ body {
 	    border-width: 20px 0 20px 45px;
 	    border-color: transparent transparent transparent $creme;
 	    margin-top: 30px;
+	}
+}
+
+#section-2 {
+	svg {
+		margin-left: 50px;
+		width: 80%;
+
+		path {
+			fill:$creme;
+		}
+	}
+
+	#check-answer {
+		background-color: $brown;
+		color: $creme;
+		border: none;
+	}
+	#q2-answer {
+		display: none;
 	}
 }
 
