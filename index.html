@@ -7,6 +7,7 @@
 	    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	    <link href="css/style.css" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:600,800,600italic,400,400italic' rel='stylesheet' type='text/css'>
     </head>
     <body>
     	<div class="container-fluid" ng-controller="SliderCtrl">
@@ -18,9 +19,26 @@
                 </ul>
             </nav>
             <div class="row deck" id="intro">
-                <div class="col-xs-12">
-                SKIN.
-                {{responses.length}} people have taken this.
+                <div class="col-xs-12" id="intro-top">
+                    <div class="row">
+                        <div class="col-xs-6 col-xs-offset-3" id="teaser">
+                            How well do you understand the challenges facing Aboriginal and Torres Straight Islanders today? Take our interactive test to find out.
+                            <div id="cumulative-score">37</div>
+                            Current collective score based on {{responses.length}} responses
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12" id="intro-bottom">
+                    <div class="row">
+                        <div class="col-xs-6 col-xs-offset-3" id="scroll-instructions">
+                            take the test
+                            <br>
+                            <a href="#section-1" du-smooth-scroll du-scrollspy>
+                                <div id="arrow-down">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="row deck" id="section-1">
@@ -41,18 +59,7 @@
             </div>
             <div class="row deck" id="section-2">
                 <div class="col-xs-12">
-                    <div class="row">
-                        <div class="col-xs-4">
-                            <div id="slider">
-                                <hr id="slider-bar">
-                                <span id="slider-pct">50%</span>
-                                <div id="slider-answer">
-                                    <hr id="slider-answer-bar">
-                                    <span id="slider-answer-pct">The answer is 22%.</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
                 </div>
             </div>
         </div>
