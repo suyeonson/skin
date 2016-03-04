@@ -13,9 +13,12 @@
     	<div class="container-fluid" ng-controller="SliderCtrl">
             <nav class="navbar navbar-default">
                 <ul class="nav navbar-nav">
-                    <li><a href="#intro" du-smooth-scroll du-scrollspy>Home</a></li>
-                    <li><a href="#section-1" du-smooth-scroll du-scrollspy>Section 1</a></li>
-                    <li><a href="#section-2" du-smooth-scroll du-scrollspy>Section 2</a></li>
+                    <li style="margin-right: 30px;"><a href="#intro" du-smooth-scroll du-scrollspy>HOME</a></li>
+                    <li><a href="#section-1" du-smooth-scroll du-scrollspy>INCARCERATION</a></li>
+                    <li><a href="#section-2" du-smooth-scroll du-scrollspy>HEALTH</a></li>
+                    <li><a href="#section-2" du-smooth-scroll du-scrollspy>MENTAL HEALTH</a></li>
+                    <li><a href="#section-2" du-smooth-scroll du-scrollspy>EDUCATION</a></li>
+                    <li><a href="#section-2" du-smooth-scroll du-scrollspy>EMPLOYMENT</a></li>
                 </ul>
             </nav>
             <div class="row deck" id="intro">
@@ -23,7 +26,7 @@
                     <div class="row">
                         <div class="col-xs-6 col-xs-offset-3" id="teaser">
                             How well do you understand the challenges facing Aboriginal and Torres Straight Islanders today? Take our interactive test to find out.
-                            <div id="cumulative-score">37</div>
+                            <div id="cumulative-score">{{responses[responses.length - 1].avg | number:0}}</div>
                             Current collective score based on {{responses.length}} responses
                         </div>
                     </div>
@@ -42,17 +45,47 @@
                 </div>
             </div>
             <div class="row deck" id="section-1">
-                <div class="col-xs-12">
+                <div class="col-xs-12 section-heading">
+                    Incarceration
+                </div>
+                <div class="col-xs-6">
                     <div class="row">
-                        <div class="col-xs-4">
+                        <div class="col-xs-12">
                             <div id="slider">
                                 <hr id="slider-bar">
-                                <span id="slider-pct">50%</span>
+                                <span id="slider-pct"></span>
                                 <div id="slider-answer">
                                     <hr id="slider-answer-bar">
                                     <span id="slider-answer-pct">The answer is 22%.</span>
                                 </div>
                             </div>
+                             <div id="slider-labels">
+                                <div id="label-top">100%</div>
+                                <div id="label-bottom">0%</div>
+                            </div>
+                        </div>
+                        <!-- <div id="slider-labels">
+                            <div id="label-top">100%</div>
+                            <div id="label-bottom">0%</div>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="col-xs-6 section-info">
+                    <div id="section-1-directions">
+                        What proportion of the Australian prison population do you think are Aboriginal and Torres Straight Islander? 
+                        <br><br>
+                        <em>Adjust the slider on the bar to the left of the screen...</em>
+                    </div>
+                    <div id="section-1-info">
+                        <div>
+                            The proportion of the population of Aboriginal and Torres Straight Islanders is 2.5%. 
+                            <br><br>
+                            The proportion of the prison population that is Aboriginal and Torres Straight Islander is 27%.
+                            <div id="section-1-d3"></div>
+                            You answered within [X]% of the correct answer, which is better than [X]% of other people.
+                            <br><br>
+                            Keep going to answer more questions, <em>or click below to find out more about incarceration rates and Aboriginal and Torres Straight Islanders.</em>
+                            <div id="arrow-right"></div>
                         </div>
                     </div>
                 </div>
@@ -69,6 +102,8 @@
         <script src="node_modules/angular/angular.js"></script>
         <script src="node_modules/angular-route/angular-route.min.js"></script>
         <script src="bower_components/angular-scroll/angular-scroll.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.19/topojson.min.js"></script>
         <script src="lib/firebase.js"></script>
 		<script src="lib/angularfire.min.js"></script>
         <script src="lib/tabletop.js"></script>

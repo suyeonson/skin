@@ -11,6 +11,12 @@ body {
   height: 100vh;
   padding: 50px;
   background-color: #ef7b51; }
+  .deck .section-heading {
+    padding: 15px 15px 45px 65px;
+    font-size: 28px; }
+  .deck .section-info {
+    color: #fffbe1;
+    font-size: 16px; }
 
 #intro {
   position: relative;
@@ -24,7 +30,7 @@ body {
       bottom: 30px; }
       #intro #intro-top #teaser #cumulative-score {
         color: #fffbe1;
-        font-size: 120px; }
+        font-size: 7em; }
   #intro #intro-bottom {
     height: 30vh;
     background-color: #fffbe1;
@@ -45,11 +51,11 @@ body {
 
 #slider {
   position: relative;
-  padding: 0;
-  margin: 50px;
-  width: 100px;
-  height: 80vh;
-  background-color: pink; }
+  margin-left: 50px;
+  width: 75px;
+  height: 75vh;
+  background-color: #fffbe1;
+  float: left; }
   #slider #slider-bar, #slider #slider-pct, #slider #slider-answer-bar, #slider #slider-answer-pct {
     position: absolute; }
   #slider #slider-bar {
@@ -62,8 +68,9 @@ body {
     left: 0 !important;
     width: 100%; }
   #slider #slider-pct {
-    top: 49%;
-    width: 100%;
+    top: 50%;
+    transform: translateY(-40%);
+    width: 250%;
     left: 100%;
     margin-left: 30px; }
   #slider #slider-answer {
@@ -76,9 +83,32 @@ body {
       width: 100%; }
     #slider #slider-answer #slider-answer-pct {
       top: 80%;
-      width: 100%;
+      width: 250%;
       left: 100%;
       margin-left: 30px; }
+
+#slider-labels {
+  position: relative;
+  padding-left: 15px;
+  height: 75vh;
+  float: left; }
+  #slider-labels #label-bottom {
+    position: absolute;
+    bottom: 0; }
+
+#section-1-info {
+  font-size: 13.3px;
+  display: none; }
+  #section-1-info svg {
+    margin-left: -150px; }
+  #section-1-info #arrow-right {
+    margin: 0 auto;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 20px 0 20px 45px;
+    border-color: transparent transparent transparent #fffbe1;
+    margin-top: 30px; }
 
 .navbar.navbar-default {
   margin-bottom: 0;

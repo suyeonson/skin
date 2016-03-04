@@ -23,6 +23,16 @@ body {
 	height: 100vh;
 	padding: 50px;
 	background-color: $orange;
+
+	.section-heading {
+		padding: 15px 15px 45px 65px;
+	    font-size: 28px;
+	}
+
+	.section-info {
+		color: $creme;
+		font-size: 16px;
+	}
 }
 
 #intro {
@@ -40,7 +50,7 @@ body {
 
 			#cumulative-score {
 				color: $creme;
-				font-size: 120px;
+				font-size: 7em;
 			}
 		}
 	}
@@ -71,11 +81,11 @@ body {
 
 #slider {
 	position: relative;
-	padding: 0;
-	margin: 50px; 
-	width: 100px; 
-	height: 80vh; 
-	background-color: pink;
+	margin-left: 50px;
+	width: 75px; 
+	height: 75vh; 
+	background-color: $creme;
+	float: left;
 
 	#slider-bar, #slider-pct, #slider-answer-bar, #slider-answer-pct {
 		position: absolute;
@@ -91,8 +101,9 @@ body {
 		width: 100%;
 	}
 	#slider-pct {
-		top: 49%;
-    	width: 100%;
+		top: 50%;
+    	transform: translateY(-40%);
+    	width: 250%;
     	left: 100%;
     	margin-left: 30px;
 	}
@@ -108,10 +119,42 @@ body {
 		}
 		#slider-answer-pct {
 			top: 80%;
-    		width: 100%;
+    		width: 250%;
     		left: 100%;
     		margin-left: 30px;
 		}
+	}
+}
+
+#slider-labels {
+	position: relative;
+	padding-left: 15px;
+	height: 75vh;
+	float: left;
+
+
+	#label-bottom {
+		position: absolute;
+		bottom: 0;
+	}
+}
+
+#section-1-info {
+	font-size: 13.3px;
+	display: none;
+
+	svg {
+		margin-left: -150px;		
+	}
+
+	#arrow-right {
+		margin: 0 auto;
+	    width: 0;
+	    height: 0;
+	    border-style: solid;
+	    border-width: 20px 0 20px 45px;
+	    border-color: transparent transparent transparent $creme;
+	    margin-top: 30px;
 	}
 }
 
