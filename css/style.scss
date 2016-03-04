@@ -40,6 +40,17 @@ body {
 	z-index: 2;
 	padding:0;
 
+	#logo {
+		position: absolute;
+	    top: 15px;
+	    left: 30px;
+	    width: 150px;
+	    height: auto;
+	    font-weight: bolder;
+	    font-size: 48px;
+	    color: #fffbe1;
+	}
+
 	#intro-top {
 		height: 70vh;
 
@@ -197,5 +208,9 @@ body {
 
     .navbar-nav>li>a:hover, ul>li>a.active {
     	color: $orange;
+    }
+
+    i {
+    	color: $creme;
     }
 }

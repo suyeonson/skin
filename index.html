@@ -19,14 +19,20 @@
                     <li><a href="#section-2" du-smooth-scroll du-scrollspy>MENTAL HEALTH</a></li>
                     <li><a href="#section-2" du-smooth-scroll du-scrollspy>EDUCATION</a></li>
                     <li><a href="#section-2" du-smooth-scroll du-scrollspy>EMPLOYMENT</a></li>
+                    <li style="position: absolute; right: 15px"><a><i class="fa fa-tumblr"></i></a></li>
+                    <li style="position: absolute; right: 50px"><a><i class="fa fa-facebook"></i></a></li>
+                    <li style="position: absolute; right: 83px"><a><i class="fa fa-twitter"></i></a></li>
                 </ul>
             </nav>
             <div class="row deck" id="intro">
                 <div class="col-xs-12" id="intro-top">
                     <div class="row">
+                        <div id="logo">
+                            SKIN
+                        </div>
                         <div class="col-xs-6 col-xs-offset-3" id="teaser">
                             How well do you understand the challenges facing Aboriginal and Torres Straight Islanders today? Take our interactive test to find out.
-                            <div id="cumulative-score">{{responses[responses.length - 1].avg | number:0}}</div>
+                            <div id="cumulative-score">{{responses[responses.length - 1].avg | number:0}}<span style="font-size: 50px; line-height: 50px;">%</span></div>
                             Current collective score based on {{responses.length}} responses
                         </div>
                     </div>
@@ -3720,7 +3726,7 @@
                         </div>
                         <br><br>
                         <div id="q2-answer">
-                        The answer is 30%.
+                        The answer is actually 30%.
                         </div>
                     </div>
                 </div>
